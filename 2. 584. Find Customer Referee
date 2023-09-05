@@ -1,0 +1,6 @@
+# Write your MySQL query statement below
+SELECT name 
+FROM Customer
+WHERE COALESCE (referee_id, 0) != 2;
+
+Link: https://leetcode.com/problems/find-customer-referee/description/?envType=study-plan-v2&envId=top-sql-50
