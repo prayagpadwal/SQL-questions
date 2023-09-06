@@ -1,5 +1,12 @@
+SQL
 # Write your MySQL query statement below
 SELECT product_id from Products
 where low_fats = 'Y' and recyclable = 'Y';
+
+Pandas
+import pandas as pd
+def find_products(products: pd.DataFrame) -> pd.DataFrame:
+    find_products_df = products[(products['low_fats'] == 'Y') & (products['recyclable'] == 'Y')]
+    return find_products_df[['product_id']]
 
 link: https://leetcode.com/problems/recyclable-and-low-fat-products/description/?envType=study-plan-v2&envId=top-sql-50
