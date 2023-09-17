@@ -3,3 +3,12 @@ QUESTION: https://platform.stratascratch.com/coding/10308-salaries-differences?c
 # Salaries Differences
 Write a query that calculates the difference between the highest salaries found in the marketing and engineering departments. Output just the absolute difference in salaries.
 
+ANSWER:
+SELECT
+    ABS(
+    MAX(case when d.department = 'engineering' THEN e.salary END) - 
+    MAX(case when d.department = 'marketing' THEN e.salary END)
+    ) AS salary_difference
+FROM db_employee e
+JOIN db_dept d
+ON e.department_id = d.id;
