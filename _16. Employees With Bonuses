@@ -1,0 +1,12 @@
+LINK:
+https://platform.stratascratch.com/coding/9903-employees-with-bonuses?code_type=1
+
+Question:
+Employees With Bonuses
+Find employees whose bonus is less than $150.
+Output the first name along with the corresponding bonus.
+
+ANSWER:
+SELECT first_name
+FROM employee
+WHERE bonus < 150;
