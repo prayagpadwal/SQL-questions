@@ -7,3 +7,14 @@ of the year and the season, and is found in the 'games' column. Output the Olymp
 with the corresponding number of athletes.
 
 ANSWER:
+SELECT 
+    games, 
+    COUNT(DISTINCT name) AS olympics_athletes_events
+FROM 
+    olympics_athletes_events
+GROUP BY 
+    games
+ORDER BY 
+    olympics_athletes_events DESC
+LIMIT 
+    1;
