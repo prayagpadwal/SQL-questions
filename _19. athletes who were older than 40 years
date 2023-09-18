@@ -4,3 +4,12 @@ https://platform.stratascratch.com/coding/9937-find-all-athletes-who-were-older-
 QUESTION:
 Find all athletes who were older than 40 years when they won either Bronze or Silver medals
 
+ANSWER:
+SELECT 
+    name
+FROM 
+    olympics_athletes_events
+WHERE 
+    age > 40 AND (medal = 'Bronze' OR medal = 'Silver')
+GROUP BY
+    name;
