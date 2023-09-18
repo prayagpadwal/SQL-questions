@@ -6,4 +6,12 @@ Find all Danish athletes who won a medal.
 Output unique names only.
 
 ANSWER:
-
+SELECT
+    name
+FROM 
+    olympics_athletes_events
+WHERE 
+    team = 'Denmark'
+    AND medal IS NOT NULL
+GROUP BY
+    name;
