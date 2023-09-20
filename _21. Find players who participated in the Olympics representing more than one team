@@ -3,7 +3,9 @@ LINK: https://platform.stratascratch.com/coding/10143-find-players-who-participa
 QUESTION: Find players who participated in the Olympics representing more than one team.
 Output the player name, team, games, sport, and the medal.
 
-ANSWER: SELECT 
+ANSWER: 
+
+SELECT 
     name 
 FROM 
     olympics_athletes_events 
