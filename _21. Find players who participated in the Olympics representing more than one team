@@ -1,2 +1,4 @@
 LINK: https://platform.stratascratch.com/coding/10143-find-players-who-participated-in-the-olympics-representing-more-than-one-team?code_type=1
 
+QUESTION: Find players who participated in the Olympics representing more than one team.
+Output the player name, team, games, sport, and the medal.
