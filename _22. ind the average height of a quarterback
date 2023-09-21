@@ -1,0 +1,13 @@
+LINK: 
+https://platform.stratascratch.com/coding/9656-find-the-average-height-of-a-quarterback?code_type=1
+
+QUESTION:
+Find the average height of a quarterback
+
+ANSWER:
+SELECT 
+    AVG(heightinchestotal) AS Avgg
+FROM 
+    nfl_combine
+WHERE 
+    position = 'QB' ;
