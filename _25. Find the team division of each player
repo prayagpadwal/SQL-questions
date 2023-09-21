@@ -1,0 +1,15 @@
+LINK:
+https://platform.stratascratch.com/coding/9884-find-the-team-division-of-each-player?code_type=1
+
+QUESTION:
+Find the team division of each player.
+Output the player name along with the corresponding team division.
+
+ANSWER:
+SELECT 
+    p.player_name,
+    t.division 
+FROM college_football_teams AS t
+JOIN college_football_players AS p
+ON t.id = p.id;
+
