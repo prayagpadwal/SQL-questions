@@ -1,0 +1,20 @@
+LINK:
+Find the history of each sport by finding the first year, last year and total times that sport was played in the Olympics
+https://platform.stratascratch.com/coding/9954-find-the-history-of-each-sport-by-finding-the-first-year-last-year-and-total-years-that-sport-played-in-the-olympics?code_type=1
+
+QUESTION:
+Find the history of each sport by finding the first year, last year, and the total number of occasions that was sport played in the Olympics.
+Output the sport name along with the first year, last year, and the total number of occasions.
+Order records by the first year in descending order.
+
+ANSWER:
+SELECT 
+    MIN(year) AS MIN_YEAR,
+    MAX(year) AS MAX_YEAR,
+    COUNT(DISTINCT year) AS total_times
+FROM 
+    olympics_athletes_events
+GROUP BY
+    sport
+ORDER BY
+    MIN_YEAR DESC;
