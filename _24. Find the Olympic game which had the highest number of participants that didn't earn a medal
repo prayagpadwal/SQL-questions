@@ -7,3 +7,16 @@ Find the Olympic game which had the highest number of participants that didn't e
 Output the Olympic game name along with the corresponding number of athletes.
 Olympic game name consists of the year and the season.
 
+ANSWER:
+SELECT 
+   CONCAT(year, '', season) AS year_season,
+   COUNT(DISTINCT id) AS Number_of_athletes
+FROM 
+    olympics_athletes_events
+WHERE
+    medal IS NULL or medal = ''
+GROUP BY
+    year_season
+ORDER BY
+    Number_of_athletes DESC
+LIMIT 1;
